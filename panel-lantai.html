@@ -6,301 +6,408 @@
   <title>Citicon Panel Lantai - Detail Produk Panel Lantai</title>
 
   <!-- Fonts & Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    body { font-family: 'Poppins', sans-serif; }
+    /* INDUSTRIAL VIBES - NO BORDER RADIUS, NO ANIMATION */
+    * {
+      border-radius: 0 !important;
+    }
+    
+    body { 
+      font-family: 'Montserrat', sans-serif; 
+      background-color: #1E1E1E;
+      color: #E0E0E0;
+    }
+    
     .primary-green { background-color: #1E5E3F; }
+    .primary-green-dark { background-color: #154C32; }
     .accent-yellow { background-color: #F4C430; }
-    .light-gray { background-color: #F5F6F7; }
+    .accent-yellow-dark { background-color: #D9AD2C; }
+    .industrial-gray { background-color: #2D2D2D; }
+    .industrial-gray-light { background-color: #3A3A3A; }
+    .industrial-gray-dark { background-color: #1E1E1E; }
+    .industrial-border { border: 1px solid #3A3A3A; }
+    .industrial-border-top { border-top: 3px solid #1E5E3F; }
+    
     .text-green { color: #1E5E3F; }
-    .border-green { border-color: #1E5E3F; }
-
-    .btn-main {
+    .text-yellow { color: #F4C430; }
+    
+    .btn-industrial {
       background: #1E5E3F;
       color: white;
       padding: 14px 32px;
       font-weight: 600;
-      transition: 0.3s;
+      border: none;
       display: inline-block;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-size: 0.9rem;
     }
-    .btn-main:hover { background: #174C33; }
+    .btn-industrial:hover { background: #154C32; }
 
-    .btn-outline {
+    .btn-outline-industrial {
       border: 2px solid #1E5E3F;
       padding: 14px 32px;
       font-weight: 600;
       color: #1E5E3F;
-      transition: 0.3s;
+      background: transparent;
       display: inline-block;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-size: 0.9rem;
     }
-    .btn-outline:hover { background: #1E5E3F; color: white; }
+    .btn-outline-industrial:hover { background: #1E5E3F; color: white; }
 
-    .product-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
-    @keyframes fade-in-down { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-    .animate-fade-in-down { animation: fade-in-down 1s ease-out forwards; }
-    .animation-delay-200 { animation-delay: 0.2s; }
+    /* Industrial table style */
+    .industrial-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .industrial-table th {
+      background-color: #1E5E3F;
+      color: white;
+      padding: 12px 8px;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 0.5px;
+      border: 1px solid #3A3A3A;
+    }
+    .industrial-table td {
+      padding: 10px 8px;
+      border: 1px solid #3A3A3A;
+      color: #E0E0E0;
+    }
+    .industrial-table tbody tr:nth-child(odd) {
+      background-color: #2A2A2A;
+    }
+    .industrial-table tbody tr:nth-child(even) {
+      background-color: #222222;
+    }
+
+    /* Industrial card */
+    .industrial-card {
+      background-color: #2A2A2A;
+      border: 1px solid #3A3A3A;
+      padding: 2rem;
+    }
+
+    /* Industrial feature box */
+    .feature-box {
+      background-color: #2A2A2A;
+      border: 1px solid #3A3A3A;
+      padding: 2rem;
+      border-top: 3px solid #1E5E3F;
+    }
+
+    /* Image style */
+    .industrial-img {
+      border: 2px solid #3A3A3A;
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* No animations, no transitions */
+    .no-transition {
+      transition: none;
+    }
+
+    hr.industrial-hr {
+      border: 0;
+      height: 2px;
+      background: #3A3A3A;
+      margin: 2rem 0;
+    }
   </style>
 </head>
-<body class="bg-white text-gray-700">
+<body class="bg-industrial-gray-dark">
 
-<!-- NAVBAR (sama dengan halaman utama) -->
-<nav class="bg-white border-b fixed w-full z-50">
+<!-- NAVBAR INDUSTRIAL -->
+<nav class="bg-industrial-gray-dark border-b border-industrial-gray-light fixed w-full z-50">
   <div class="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
-    <h1 class="text-2xl font-bold text-green tracking-wide">CITICON PANEL LANTAI</h1>
+    <h1 class="text-2xl font-bold text-white tracking-wide">
+      <span class="text-green">CITICON</span> <span class="text-yellow">INDUSTRIAL</span>
+    </h1>
     <div class="hidden md:flex space-x-8 font-medium text-sm uppercase tracking-wide">
-      <a href="index.html#home" class="hover:text-green-700">Beranda</a>
-      <a href="index.html#produk" class="hover:text-green-700">Produk</a>
-      <a href="index.html#proses" class="hover:text-green-700">Proses</a>
-      <a href="index.html#about" class="hover:text-green-700">Tentang</a>
-      <a href="index.html#kontak" class="hover:text-green-700">Kontak</a>
+      <a href="index.html#home" class="text-gray-300 hover:text-white">Beranda</a>
+      <a href="index.html#produk" class="text-gray-300 hover:text-white">Produk</a>
+      <a href="index.html#proses" class="text-gray-300 hover:text-white">Proses</a>
+      <a href="index.html#about" class="text-gray-300 hover:text-white">Tentang</a>
+      <a href="index.html#kontak" class="text-gray-300 hover:text-white">Kontak</a>
     </div>
   </div>
 </nav>
 
-<!-- ===== HERO SECTION ===== (Adaptasi dari kode kedua) -->
-<section class="relative bg-cover bg-center py-40 px-4 sm:px-6 text-center" style="background-image: url('https://placehold.co/1920x1080/1E5E3F/FFFFFF?text=Panel+Lantai+Citicon');">
-  <div class="absolute inset-0 bg-black opacity-30 z-0"></div>
-  <div class="relative z-10 mx-auto max-w-3xl bg-white bg-opacity-80 backdrop-blur-sm shadow-lg rounded-2xl px-6 py-10 sm:px-10 text-gray-800 animate-fade-in-down">
-    <h1 class="text-4xl sm:text-5xl font-bold text-green mb-4">
-      Panel Lantai <span class="text-yellow-600">Citicon</span>
-    </h1>
-    <p class="text-lg leading-relaxed mb-6">
-      Solusi dak lantai praktis, ringan, dan kuat. Diproduksi dengan teknologi AAC (Autoclaved Aerated Concrete) dan diperkuat tulangan baja, menjadikannya pilihan ideal untuk hunian, ruko, hingga proyek bertingkat.
-    </p>
-    <div class="flex flex-col sm:flex-row justify-center gap-4">
-      <a href="#spesifikasi" class="btn-main">Lihat Spesifikasi</a>
-      <a href="#kontak" class="btn-outline">Dapatkan Penawaran</a>
+<!-- HERO INDUSTRIAL - TANPA ANIMASI -->
+<section class="pt-40 pb-28" style="background-color: #1E1E1E;">
+  <div class="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-16 items-center">
+    <div>
+      <div class="industrial-border-top w-16 mb-6"></div>
+      <p class="uppercase text-sm tracking-widest text-gray-400 mb-4">
+        INDUSTRIAL SERIES // PRECAST CONCRETE
+      </p>
+      <h2 class="text-5xl font-extrabold leading-tight text-white">
+        PANEL LANTAI
+        <br>
+        <span class="text-green">CITICON</span> <span class="text-yellow">HEAVY DUTY</span>
+      </h2>
+      <p class="mt-6 text-lg leading-relaxed text-gray-400">
+        Material pracetak untuk konstruksi berat. Dirancang dengan spesifikasi teknis 
+        presisi untuk proyek industri, komersial, dan hunian vertikal. Kekuatan struktural 
+        dengan efisiensi waktu pemasangan.
+      </p>
+      <div class="mt-10 flex gap-6">
+        <a href="#spesifikasi" class="btn-industrial">SPESIFIKASI TEKNIS</a>
+        <a href="#kontak" class="btn-outline-industrial">KONSULTASI PROYEK</a>
+      </div>
     </div>
-    <a href="index.html" class="mt-6 inline-block text-green underline text-sm hover:text-green-800">← Kembali ke Halaman Utama</a>
+    <div>
+      <img src="https://placehold.co/800x600/2A2A2A/1E5E3F?text=PANEL+LANTAI+CITICON" class="industrial-img" alt="Panel Lantai Citicon">
+    </div>
   </div>
 </section>
 
-<!-- ===== LOGO MITRA ===== -->
-<section class="py-12 bg-gray-100">
-  <div class="container mx-auto px-6">
-    <p class="text-center text-gray-500 mb-8">Material Pracetak Berkualitas:</p>
-    <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+<!-- STATS INDUSTRIAL -->
+<section class="py-16" style="background-color: #222222;">
+  <div class="max-w-7xl mx-auto px-8 grid md:grid-cols-4 gap-px">
+    <div class="industrial-card text-center" style="border-right: none;">
+      <h3 class="text-4xl font-bold text-yellow">500+</h3>
+      <p class="mt-2 text-gray-400 uppercase text-sm tracking-wider">PROYEK</p>
+    </div>
+    <div class="industrial-card text-center" style="border-right: none; border-left: none;">
+      <h3 class="text-4xl font-bold text-yellow">15+</h3>
+      <p class="mt-2 text-gray-400 uppercase text-sm tracking-wider">TAHUN</p>
+    </div>
+    <div class="industrial-card text-center" style="border-right: none; border-left: none;">
+      <h3 class="text-4xl font-bold text-yellow">100%</h3>
+      <p class="mt-2 text-gray-400 uppercase text-sm tracking-wider">ORIGINAL</p>
+    </div>
+    <div class="industrial-card text-center" style="border-left: none;">
+      <h3 class="text-4xl font-bold text-yellow">24/7</h3>
+      <p class="mt-2 text-gray-400 uppercase text-sm tracking-wider">SUPPORT</p>
+    </div>
+  </div>
+</section>
+
+<!-- LOGO MITRA -->
+<section class="py-12" style="background-color: #2A2A2A;">
+  <div class="max-w-7xl mx-auto px-8">
+    <p class="text-center text-gray-400 uppercase text-sm tracking-wider mb-8">CERTIFIED DISTRIBUTOR</p>
+    <div class="flex flex-wrap justify-center items-center gap-12">
       <div class="flex flex-col items-center">
-        <img src="https://placehold.co/120x60/1E5E3F/white?text=CITICON" alt="Citicon">
-        <p class="mt-2 text-sm font-medium text-gray-700">Citicon</p>
+        <img src="https://placehold.co/120x60/1E5E3F/white?text=CITICON" class="industrial-img" style="border: none;" alt="Citicon">
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== PRODUK CAROUSEL (Inspirasi kode kedua) ===== -->
-<section id="produk" class="pt-20 pb-12 bg-white">
-  <div class="container mx-auto px-6 text-center">
-    <span class="text-sm uppercase tracking-wider text-green">Material Unggulan</span>
-    <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-10">Varian <span class="text-green">Panel Lantai</span></h2>
-    <div class="relative w-full overflow-hidden">
-      <div id="carouselTrack" class="flex transition-transform duration-700 ease-in-out">
-        <img src="https://placehold.co/600x400/1E5E3F/white?text=Panel+Lantai+1" class="w-full md:w-1/3 px-2 scale-90 opacity-70 transition-all object-cover" alt="Panel Lantai">
-        <img src="https://placehold.co/600x400/F4C430/1E5E3F?text=Proses+Pemasangan" class="w-full md:w-1/3 px-2 scale-100 opacity-100 transition-all object-cover" alt="Proses Pemasangan">
-        <img src="https://placehold.co/600x400/1E5E3F/white?text=Hasil+Akhir" class="w-full md:w-1/3 px-2 scale-90 opacity-70 transition-all object-cover" alt="Hasil Akhir">
-      </div>
-    </div>
-  </div>
-</section>
-
-<script>
-  // Carousel sederhana (dari kode kedua)
-  const track = document.getElementById('carouselTrack');
-  if(track) {
-    setInterval(() => {
-      track.appendChild(track.children[0]);
-      Array.from(track.children).forEach((slide, i) => {
-        slide.classList.remove('scale-100', 'opacity-100');
-        slide.classList.add('scale-90', 'opacity-70');
-      });
-      track.children[1].classList.remove('scale-90', 'opacity-70');
-      track.children[1].classList.add('scale-100', 'opacity-100');
-    }, 4000);
-  }
-</script>
-
-<!-- ===== TABEL SPESIFIKASI ===== (Diadaptasi dari kode kedua) -->
-<section id="spesifikasi" class="py-20 light-gray">
+<!-- TABEL SPESIFIKASI -->
+<section id="spesifikasi" class="py-20" style="background-color: #1E1E1E;">
   <div class="max-w-7xl mx-auto px-4">
-    <div class="text-center mb-12">
-      <span class="text-sm uppercase tracking-wider text-green">Teknis & Ukuran</span>
-      <h2 class="text-3xl md:text-4xl font-bold mt-2">Spesifikasi <span class="text-green">Panel Lantai Citicon</span></h2>
-      <p class="text-gray-600 mt-2">Detail ukuran, berat, dan jumlah per kubik.</p>
+    <div class="mb-12">
+      <div class="industrial-border-top w-16 mb-4"></div>
+      <span class="text-sm uppercase tracking-wider text-gray-400">TECHNICAL DATA</span>
+      <h2 class="text-3xl md:text-4xl font-bold mt-2 text-white">SPESIFIKASI <span class="text-green">PANEL LANTAI</span></h2>
     </div>
     <div class="overflow-x-auto">
-      <table class="min-w-full bg-white border rounded shadow text-sm md:text-base">
-        <thead class="primary-green text-white">
+      <table class="industrial-table">
+        <thead>
           <tr>
-            <th class="px-4 py-3 border">Tipe Panel</th>
-            <th class="px-4 py-3 border">Panjang (mm)</th>
-            <th class="px-4 py-3 border">Lebar (mm)</th>
-            <th class="px-4 py-3 border">Tebal (mm)</th>
-            <th class="px-4 py-3 border">Berat (kg)</th>
-            <th class="px-4 py-3 border">Jumlah/m³ (pcs)</th>
+            <th>TIPE</th>
+            <th>PANJANG (mm)</th>
+            <th>LEBAR (mm)</th>
+            <th>TEBAL (mm)</th>
+            <th>BERAT (kg)</th>
+            <th>/m³ (pcs)</th>
           </tr>
         </thead>
         <tbody>
-          <tr class="text-center"><td class="px-4 py-2 border">PL - 1500</td><td>1470</td><td>600</td><td>125</td><td>86,0</td><td>9,07</td></tr>
-          <tr class="text-center bg-gray-50"><td class="px-4 py-2 border">PL - 1750</td><td>1720</td><td>600</td><td>125</td><td>100,6</td><td>7,75</td></tr>
-          <tr class="text-center"><td class="px-4 py-2 border">PL - 2000</td><td>1970</td><td>600</td><td>125</td><td>115,3</td><td>6,77</td></tr>
-          <tr class="text-center bg-gray-50"><td class="px-4 py-2 border">PL - 2250</td><td>2220</td><td>600</td><td>125</td><td>129,9</td><td>6,01</td></tr>
-          <tr class="text-center"><td class="px-4 py-2 border">PL - 2500</td><td>2470</td><td>600</td><td>125</td><td>144,5</td><td>5,40</td></tr>
-          <tr class="text-center bg-gray-50"><td class="px-4 py-2 border">PL - 2750</td><td>2720</td><td>600</td><td>125</td><td>159,1</td><td>4,90</td></tr>
-          <tr class="text-center"><td class="px-4 py-2 border">PL - 3000</td><td>2970</td><td>600</td><td>125</td><td>173,8</td><td>4,49</td></tr>
-          <tr class="text-center bg-gray-50"><td class="px-4 py-2 border">PL - 3250</td><td>3220</td><td>600</td><td>125</td><td>188,4</td><td>4,14</td></tr>
+          <tr><td>PL - 1500</td><td>1470</td><td>600</td><td>125</td><td>86.0</td><td>9.07</td></tr>
+          <tr><td>PL - 1750</td><td>1720</td><td>600</td><td>125</td><td>100.6</td><td>7.75</td></tr>
+          <tr><td>PL - 2000</td><td>1970</td><td>600</td><td>125</td><td>115.3</td><td>6.77</td></tr>
+          <tr><td>PL - 2250</td><td>2220</td><td>600</td><td>125</td><td>129.9</td><td>6.01</td></tr>
+          <tr><td>PL - 2500</td><td>2470</td><td>600</td><td>125</td><td>144.5</td><td>5.40</td></tr>
+          <tr><td>PL - 2750</td><td>2720</td><td>600</td><td>125</td><td>159.1</td><td>4.90</td></tr>
+          <tr><td>PL - 3000</td><td>2970</td><td>600</td><td>125</td><td>173.8</td><td>4.49</td></tr>
+          <tr><td>PL - 3250</td><td>3220</td><td>600</td><td>125</td><td>188.4</td><td>4.14</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="text-sm text-gray-500 mt-4 text-center">* Data dapat berubah sewaktu-waktu. Konsultasikan dengan tim kami untuk kebutuhan spesifik.</p>
+    <p class="text-sm text-gray-500 mt-4">* Spesifikasi dapat berubah tanpa pemberitahuan. Konsultasikan dengan tim engineering kami.</p>
   </div>
 </section>
 
-<!-- ===== KELEBIHAN PRODUK (FITUR) ===== -->
-<section id="fitur" class="py-20 bg-white">
+<!-- KEUNGGULAN PRODUK - INDUSTRIAL FEATURES -->
+<section class="py-20" style="background-color: #222222;">
   <div class="max-w-7xl mx-auto px-6">
-    <div class="text-center mb-16">
-      <span class="text-sm uppercase tracking-wider text-green">Mengapa Memilih Citicon</span>
-      <h2 class="text-3xl md:text-4xl font-bold mt-2">Keunggulan <span class="text-green">Panel Lantai</span></h2>
+    <div class="mb-16">
+      <div class="industrial-border-top w-16 mb-4"></div>
+      <span class="text-sm uppercase tracking-wider text-gray-400">ENGINEERED FOR EXCELLENCE</span>
+      <h2 class="text-3xl md:text-4xl font-bold mt-2 text-white">KEUNGGULAN <span class="text-green">TEKNIS</span></h2>
     </div>
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
       <!-- Fitur 1 -->
-      <div class="bg-light-gray p-8 rounded-xl shadow-sm hover:shadow-md transition-all product-card">
-        <div class="w-16 h-16 primary-green rounded-full flex items-center justify-center mb-4 text-white text-2xl"><i class="fas fa-bolt"></i></div>
-        <h3 class="text-lg font-bold mb-2">Pemasangan Cepat</h3>
-        <p class="text-gray-600">Hemat waktu hingga 60% dibanding pengecoran konvensional. Tanpa bekisting, tanpa proses curing lama.</p>
+      <div class="feature-box">
+        <div class="w-12 h-12 bg-industrial-gray-light flex items-center justify-center mb-4">
+          <i class="fas fa-bolt text-yellow text-xl"></i>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">INSTALASI CEPAT</h3>
+        <p class="text-gray-400 text-sm">Tanpa bekisting, tanpa cor. Siap pasang langsung, menghemat waktu proyek hingga 60%.</p>
       </div>
       <!-- Fitur 2 -->
-      <div class="bg-light-gray p-8 rounded-xl shadow-sm hover:shadow-md transition-all product-card">
-        <div class="w-16 h-16 primary-green rounded-full flex items-center justify-center mb-4 text-white text-2xl"><i class="fas fa-weight-hanging"></i></div>
-        <h3 class="text-lg font-bold mb-2">Ringan & Kuat</h3>
-        <p class="text-gray-600">Mengurangi beban struktur hingga 30%. Diperkuat wiremesh, mampu menahan beban hidup tinggi.</p>
+      <div class="feature-box">
+        <div class="w-12 h-12 bg-industrial-gray-light flex items-center justify-center mb-4">
+          <i class="fas fa-weight-hanging text-yellow text-xl"></i>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">RINGAN & KUAT</h3>
+        <p class="text-gray-400 text-sm">Mengurangi bebean struktur hingga 30%. Diperkuat wiremesh untuk menahan beban tinggi.</p>
       </div>
       <!-- Fitur 3 -->
-      <div class="bg-light-gray p-8 rounded-xl shadow-sm hover:shadow-md transition-all product-card">
-        <div class="w-16 h-16 primary-green rounded-full flex items-center justify-center mb-4 text-white text-2xl"><i class="fas fa-shield-alt"></i></div>
-        <h3 class="text-lg font-bold mb-2">Tahan Api & Rayap</h3>
-        <p class="text-gray-600">Material beton ringan yang tidak mudah terbakar dan tidak disukai rayap, aman untuk jangka panjang.</p>
+      <div class="feature-box">
+        <div class="w-12 h-12 bg-industrial-gray-light flex items-center justify-center mb-4">
+          <i class="fas fa-fire text-yellow text-xl"></i>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">Tahan Api</h3>
+        <p class="text-gray-400 text-sm">Material beton kelas 1, tidak mudah terbakar. Ideal untuk bangunan dengan standar safety tinggi.</p>
       </div>
       <!-- Fitur 4 -->
-      <div class="bg-light-gray p-8 rounded-xl shadow-sm hover:shadow-md transition-all product-card">
-        <div class="w-16 h-16 primary-green rounded-full flex items-center justify-center mb-4 text-white text-2xl"><i class="fas fa-check-circle"></i></div>
-        <h3 class="text-lg font-bold mb-2">Presisi & Siap Finishing</h3>
-        <p class="text-gray-600">Permukaan rata, siap untuk plester, acian, atau langsung dipasang keramik tanpa perataan tambahan.</p>
+      <div class="feature-box">
+        <div class="w-12 h-12 bg-industrial-gray-light flex items-center justify-center mb-4">
+          <i class="fas fa-ruler text-yellow text-xl"></i>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">Presisi Tinggi</h3>
+        <p class="text-gray-400 text-sm">Toleransi ±1mm. Permukaan rata, siap finishing tanpa perataan tambahan.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== STORYTELLING / TENTANG PRODUK ===== -->
-<section class="py-20 primary-green text-white">
-  <div class="max-w-4xl mx-auto px-8 text-center">
-    <h3 class="text-3xl font-bold mb-6">Mengapa Panel Lantai Menjadi Solusi Modern?</h3>
-    <p class="text-lg leading-relaxed mb-4">
-      Di era konstruksi yang menuntut kecepatan dan efisiensi, Panel Lantai Citicon hadir sebagai jawaban. Tidak hanya memangkas waktu proyek, material ini juga memastikan kualitas yang konsisten berkat proses produksi pabrikasi yang terkontrol.
-    </p>
-    <p class="text-lg leading-relaxed">
-      Dengan bobot yang lebih ringan, struktur bangunan Anda menjadi lebih efisien tanpa mengorbankan kekuatan. Cocok untuk rumah tinggal, ruko, apartemen, hingga gedung bertingkat.
-    </p>
+<!-- STORYTELLING INDUSTRIAL -->
+<section class="py-20 primary-green">
+  <div class="max-w-5xl mx-auto px-8">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <div class="w-16 h-1 bg-yellow mb-6"></div>
+        <h3 class="text-3xl font-bold text-white mb-6">ENGINEERED FOR TOUGH PROJECTS</h3>
+        <p class="text-gray-200 leading-relaxed mb-4">
+          Panel Lantai Citicon Industrial Series dirancang untuk memenuhi tuntutan proyek konstruksi modern. 
+          Diproduksi dengan teknologi Autoclaved Aerated Concrete (AAC) dan diperkuat tulangan baja, 
+          material ini menggabungkan kekuatan struktural dengan efisiensi instalasi.
+        </p>
+        <p class="text-gray-200 leading-relaxed">
+          Setiap panel melewati proses quality control ketat, memastikan konsistensi dimensi dan kekuatan 
+          yang sesuai standar SNI. Pilihan tepat untuk kontraktor dan pengembang yang mengutamakan presisi.
+        </p>
+      </div>
+      <div>
+        <img src="https://placehold.co/600x400/2A2A2A/F4C430?text=QUALITY+CONTROL" class="industrial-img" alt="Quality Control">
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ===== GALERI APLIKASI ===== (Adaptasi dari kode kedua) -->
-<section id="galeri" class="py-20 light-gray">
+<!-- GALERI PROYEK - INDUSTRIAL -->
+<section class="py-20" style="background-color: #1E1E1E;">
   <div class="max-w-7xl mx-auto px-6">
-    <div class="text-center mb-12">
-      <span class="text-sm uppercase tracking-wider text-green">Dokumentasi</span>
-      <h2 class="text-3xl md:text-4xl font-bold mt-2">Galeri <span class="text-green">Proyek</span></h2>
+    <div class="mb-12">
+      <div class="industrial-border-top w-16 mb-4"></div>
+      <span class="text-sm uppercase tracking-wider text-gray-400">PROJECT GALLERY</span>
+      <h2 class="text-3xl md:text-4xl font-bold mt-2 text-white">APLIKASI <span class="text-green">LAPANGAN</span></h2>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Item 1 -->
-      <div class="group relative overflow-hidden rounded-xl">
-        <img src="https://placehold.co/600x400/1E5E3F/white?text=Proyek+Rumah" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" alt="Proyek Rumah">
-        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-          <h3 class="text-white text-xl font-bold">Proyek Perumahan</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div>
+        <img src="https://placehold.co/600x400/2A2A2A/1E5E3F?text=PROYEK+RUMAH" class="industrial-img" alt="Proyek Rumah">
+        <div class="industrial-card mt-0 border-t-0">
+          <h3 class="text-white font-bold">RESIDENTIAL</h3>
+          <p class="text-gray-400 text-sm">Perumahan Citra Garden</p>
         </div>
       </div>
-      <!-- Item 2 -->
-      <div class="group relative overflow-hidden rounded-xl">
-        <img src="https://placehold.co/600x400/F4C430/1E5E3F?text=Ruko+2+Lantai" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" alt="Ruko">
-        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-          <h3 class="text-white text-xl font-bold">Ruko 2 Lantai</h3>
+      <div>
+        <img src="https://placehold.co/600x400/2A2A2A/F4C430?text=PROYEK+RUKO" class="industrial-img" alt="Proyek Ruko">
+        <div class="industrial-card mt-0 border-t-0">
+          <h3 class="text-white font-bold">COMMERCIAL</h3>
+          <p class="text-gray-400 text-sm">Ruko 3 Lantai</p>
         </div>
       </div>
-      <!-- Item 3 -->
-      <div class="group relative overflow-hidden rounded-xl">
-        <img src="https://placehold.co/600x400/1E5E3F/white?text=Renovasi+Dak" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" alt="Renovasi">
-        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-          <h3 class="text-white text-xl font-bold">Renovasi Dak Rumah</h3>
+      <div>
+        <img src="https://placehold.co/600x400/2A2A2A/1E5E3F?text=PROYEK+GUDANG" class="industrial-img" alt="Proyek Gudang">
+        <div class="industrial-card mt-0 border-t-0">
+          <h3 class="text-white font-bold">INDUSTRIAL</h3>
+          <p class="text-gray-400 text-sm">Gudang Logistik</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== CTA SECTION ===== (Adaptasi dari kode kedua) -->
-<section id="kontak" class="py-20 accent-yellow text-center">
-  <div class="max-w-4xl mx-auto px-6">
-    <h2 class="text-3xl md:text-4xl font-bold text-green mb-4">Dapatkan Penawaran Terbaik</h2>
-    <p class="text-lg text-green mb-8">Hubungi tim kami sekarang untuk konsultasi kebutuhan panel lantai Anda.</p>
+<!-- CTA INDUSTRIAL -->
+<section class="py-20" style="background-color: #F4C430;">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-industrial-gray-dark mb-4">SIAP MEMULAI PROYEK?</h2>
+    <p class="text-lg text-industrial-gray-dark mb-8">Dapatkan penawaran khusus untuk proyek Anda. Tim engineering kami siap membantu.</p>
     <div class="flex flex-col sm:flex-row justify-center gap-4">
-      <a href="https://wa.me/628972225290" class="btn-main flex items-center justify-center gap-2"><i class="fab fa-whatsapp text-xl"></i> WhatsApp</a>
-      <a href="mailto:sales@citiconpanel.com" class="btn-outline flex items-center justify-center gap-2"><i class="far fa-envelope"></i> Email</a>
+      <a href="#" class="btn-industrial" style="background-color: #1E1E1E; color: white; border: none;">HUBUNGI SALES</a>
+      <a href="#" class="btn-outline-industrial" style="border-color: #1E1E1E; color: #1E1E1E;">DOWNLOAD BROCHURE</a>
     </div>
   </div>
 </section>
 
-<!-- ===== FOOTER (sama dengan utama) ===== -->
-<footer class="bg-gray-900 text-gray-400 py-10 text-center text-sm">
-  <div class="max-w-7xl mx-auto px-8">
-    <p>© 2026 Citicon Panel Lantai. All rights reserved.</p>
-    <p class="mt-2">Jl. Contoh No. 123, Jakarta | Telp: (021) 12345678</p>
+<!-- FOOTER INDUSTRIAL -->
+<footer class="bg-industrial-gray-dark border-t border-industrial-gray-light py-10">
+  <div class="max-w-7xl mx-auto px-8 text-center">
+    <p class="text-gray-400 text-sm">© 2026 CITICON INDUSTRIAL SERIES. ALL RIGHTS RESERVED.</p>
+    <p class="text-gray-500 text-xs mt-2">JL. INDUSTRI NO. 123 | TELP: (021) 5555-8888 | EMAIL: INDUSTRIAL@CITICON.COM</p>
   </div>
 </footer>
 
-<!-- Floating WhatsApp Button -->
-<a href="https://wa.me/628972225290" target="_blank" class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all">
-  <i class="fab fa-whatsapp text-2xl"></i>
+<!-- Floating WhatsApp - INDUSTRIAL STYLE -->
+<a href="#" target="_blank" class="fixed bottom-6 right-6 z-50 bg-industrial-gray-dark border-2 border-green p-4">
+  <i class="fab fa-whatsapp text-green text-2xl"></i>
 </a>
 
-<!-- Floating Menu Button (opsional, dari kode kedua) -->
+<!-- Floating Menu - INDUSTRIAL -->
 <div class="fixed bottom-6 left-6 z-50">
-  <div class="relative" id="floatingMenu">
-    <button id="menuButton" class="bg-green-600 hover:bg-green-700 text-white p-4 rounded-full shadow-lg cursor-pointer transition-all">
-      <i class="fas fa-bars text-2xl"></i>
+  <div class="relative">
+    <button id="menuButton" class="bg-industrial-gray-dark border-2 border-green p-4">
+      <i class="fas fa-bars text-green text-2xl"></i>
     </button>
-    <div id="menuDropdown" class="absolute bottom-16 left-0 w-44 flex flex-col items-center space-y-2 opacity-0 pointer-events-none transition-all duration-300 bg-transparent">
-      <a href="index.html" class="block bg-white hover:bg-gray-100 text-gray-800 text-sm font-medium px-4 py-2 rounded-lg shadow-md w-full text-center">Beranda</a>
-      <a href="bata-ringan.html" class="block bg-white hover:bg-gray-100 text-gray-800 text-sm font-medium px-4 py-2 rounded-lg shadow-md w-full text-center">Bata Ringan</a>
-      <a href="#" class="block bg-white text-green-600 font-semibold px-4 py-2 rounded-lg shadow-md w-full text-center">Panel Lantai</a>
+    <div id="menuDropdown" class="absolute bottom-16 left-0 w-44 flex flex-col opacity-0 pointer-events-none bg-industrial-gray-dark border border-industrial-gray-light">
+      <a href="index.html" class="block text-gray-300 hover:bg-green hover:text-white px-4 py-3 text-sm font-medium border-b border-industrial-gray-light">BERANDA</a>
+      <a href="bata-ringan.html" class="block text-gray-300 hover:bg-green hover:text-white px-4 py-3 text-sm font-medium border-b border-industrial-gray-light">BATA RINGAN</a>
+      <a href="#" class="block bg-green text-white px-4 py-3 text-sm font-medium">PANEL LANTAI</a>
     </div>
   </div>
 </div>
 
 <script>
-  // Floating menu script (dari kode kedua)
+  // Simple menu toggle - no animations
   const menuButton = document.getElementById("menuButton");
   const menuDropdown = document.getElementById("menuDropdown");
+  
   if(menuButton && menuDropdown) {
-    let hideTimeout;
-    function showDropdown() {
+    menuButton.addEventListener("mouseenter", function() {
       menuDropdown.classList.add("opacity-100", "pointer-events-auto");
       menuDropdown.classList.remove("opacity-0", "pointer-events-none");
-      clearTimeout(hideTimeout);
-      hideTimeout = setTimeout(() => {
-        menuDropdown.classList.remove("opacity-100", "pointer-events-auto");
-        menuDropdown.classList.add("opacity-0", "pointer-events-none");
-      }, 3000);
-    }
-    menuButton.addEventListener("mouseenter", showDropdown);
-    menuDropdown.addEventListener("mouseenter", () => clearTimeout(hideTimeout));
-    menuDropdown.addEventListener("mouseleave", () => {
-      hideTimeout = setTimeout(() => {
+    });
+    
+    menuButton.addEventListener("mouseleave", function() {
+      setTimeout(function() {
         menuDropdown.classList.remove("opacity-100", "pointer-events-auto");
         menuDropdown.classList.add("opacity-0", "pointer-events-none");
       }, 2000);
+    });
+    
+    menuDropdown.addEventListener("mouseenter", function() {
+      // Keep open
+    });
+    
+    menuDropdown.addEventListener("mouseleave", function() {
+      menuDropdown.classList.remove("opacity-100", "pointer-events-auto");
+      menuDropdown.classList.add("opacity-0", "pointer-events-none");
     });
   }
 </script>
