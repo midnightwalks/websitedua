@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Citicon Panel Lantai - Distributor Resmi Panel Lantai</title>
+  <title>Citicon Panel Lantai - Distributor Resmi Panel Lantai & Bata Ringan</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logobulatciticon.png">
+  <link rel="shortcut icon" type="image/png" href="logobulatciticon.png">
 
   <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -12,25 +16,21 @@
 
   <style>
     body { font-family: 'Poppins', sans-serif; }
-
     .primary-green { background-color: #1E5E3F; }
     .accent-yellow { background-color: #F4C430; }
     .light-gray { background-color: #F5F6F7; }
-
     .text-green { color: #1E5E3F; }
     .border-green { border-color: #1E5E3F; }
-
+    
     .btn-main {
       background: #1E5E3F;
       color: white;
       padding: 14px 32px;
       font-weight: 600;
       transition: 0.3s;
+      display: inline-block;
     }
-
-    .btn-main:hover {
-      background: #174C33;
-    }
+    .btn-main:hover { background: #174C33; }
 
     .btn-outline {
       border: 2px solid #1E5E3F;
@@ -38,106 +38,45 @@
       font-weight: 600;
       color: #1E5E3F;
       transition: 0.3s;
+      display: inline-block;
     }
+    .btn-outline:hover { background: #1E5E3F; color: white; }
 
-    .btn-outline:hover {
-      background: #1E5E3F;
-      color: white;
-    }
-
-    /* Industrial styles dari halaman kedua */
-    * {
-      border-radius: 0 !important;
-    }
-    
-    .industrial-border { border: 1px solid #E5E7EB; }
+    /* Industrial styles */
     .industrial-border-top { border-top: 3px solid #1E5E3F; }
-    .industrial-border-bottom { border-bottom: 3px solid #1E5E3F; }
-    
-    .industrial-table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    .industrial-table th {
-      background-color: #1E5E3F;
-      color: white;
-      padding: 12px 8px;
-      font-weight: 600;
-      text-transform: uppercase;
-      font-size: 0.85rem;
-      letter-spacing: 0.5px;
-      border: 1px solid #E5E7EB;
-    }
-    .industrial-table td {
-      padding: 10px 8px;
-      border: 1px solid #E5E7EB;
-      color: #374151;
-    }
-    .industrial-table tbody tr:nth-child(odd) {
-      background-color: #F9FAFB;
-    }
-    .industrial-table tbody tr:nth-child(even) {
-      background-color: #FFFFFF;
-    }
-
-    .feature-box {
-      background-color: #FFFFFF;
-      border: 1px solid #E5E7EB;
-      padding: 2rem;
-      border-top: 3px solid #1E5E3F;
-    }
-
-    .industrial-img {
-      border: 1px solid #E5E7EB;
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-      display: block;
-    }
+    .floating-menu-btn { transition: all 0.3s; }
+    .menu-dropdown { transition: opacity 0.3s; }
   </style>
 </head>
-
 <body class="bg-white text-gray-700">
 
 <!-- NAVBAR -->
 <nav class="bg-white border-b fixed w-full z-50">
   <div class="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
-    <h1 class="text-2xl font-bold text-green tracking-wide">
-      CITICON PANEL LANTAI
-    </h1>
-
+    <div class="flex items-center gap-3">
+      <img src="logociticononly.png" class="w-10 h-10 object-contain" alt="Citicon Logo">
+      <h1 class="text-2xl font-bold text-green tracking-wide">CITICON PANEL LANTAI</h1>
+    </div>
     <div class="hidden md:flex space-x-8 font-medium text-sm uppercase tracking-wide">
       <a href="#home" class="hover:text-green-700">Beranda</a>
       <a href="#produk" class="hover:text-green-700">Produk</a>
-      <a href="#spesifikasi" class="hover:text-green-700">Spesifikasi</a>
-      <a href="#about" class="hover:text-green-700">Tentang</a>
+      <a href="#tentang" class="hover:text-green-700">Tentang</a>
       <a href="#kontak" class="hover:text-green-700">Kontak</a>
     </div>
   </div>
 </nav>
 
-<!-- HERO SECTION (gabungan hero index + industrial) -->
+<!-- HERO SECTION -->
 <section id="home" class="pt-40 pb-28 light-gray">
   <div class="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-16 items-center">
     <div>
       <div class="industrial-border-top w-16 mb-6"></div>
-      <p class="uppercase text-sm tracking-widest text-gray-500 mb-4">
-        Distributor Resmi Material Konstruksi
-      </p>
-      <h2 class="text-5xl font-extrabold leading-tight text-green">
-        Solusi Panel Lantai
-        <br>
-        <span class="text-gray-800">Cepat, Kuat, dan Presisi</span>
-      </h2>
-      <p class="mt-6 text-lg leading-relaxed text-gray-600">
-        Kami memahami bahwa setiap proyek konstruksi menuntut efisiensi waktu,
-        ketepatan spesifikasi, dan kualitas material yang konsisten.
-        Citicon Panel Lantai hadir sebagai mitra terpercaya untuk mendukung
-        pembangunan rumah, ruko, dan proyek skala besar.
-      </p>
+      <p class="uppercase text-sm tracking-widest text-gray-500 mb-4">DISTRIBUTOR RESMI MATERIAL KONSTRUKSI</p>
+      <h2 class="text-5xl font-extrabold leading-tight text-green">Solusi Material<br><span class="text-gray-800">Bata Ringan & Panel Lantai</span></h2>
+      <p class="mt-6 text-lg leading-relaxed text-gray-600">Mandiri Jaya adalah distributor resmi panel lantai dan bata ringan (hebel) yang berlokasi di Kota Jogjakarta. Kami menyediakan material berkualitas untuk kebutuhan proyek konstruksi Anda. Kami melayani pengiriman ke seluruh Jogja dan Jawa Tengah.</p>
       <div class="mt-10 flex gap-6">
         <a href="#produk" class="btn-main">Lihat Produk</a>
-        <a href="#kontak" class="btn-outline">Konsultasi Proyek</a>
+        <a href="#kontak" class="btn-outline">Hubungi Kami</a>
       </div>
     </div>
     <div class="bg-[#1E5E3F] flex items-center justify-center p-4" style="min-height: 400px;">
@@ -146,363 +85,118 @@
   </div>
 </section>
 
-<!-- VALUE PROPOSITION (dari index) -->
+<!-- VALUE PROPOSITION -->
 <section class="py-20 bg-white">
   <div class="max-w-7xl mx-auto px-8 grid md:grid-cols-4 gap-10 text-center">
-    <div>
-      <h3 class="text-4xl font-bold text-green">500+</h3>
-      <p class="mt-3 text-gray-600">Proyek Terselesaikan</p>
-    </div>
-    <div>
-      <h3 class="text-4xl font-bold text-green">10+</h3>
-      <p class="mt-3 text-gray-600">Tahun Pengalaman</p>
-    </div>
-    <div>
-      <h3 class="text-4xl font-bold text-green">100%</h3>
-      <p class="mt-3 text-gray-600">Material Original</p>
-    </div>
-    <div>
-      <h3 class="text-4xl font-bold text-green">Fast</h3>
-      <p class="mt-3 text-gray-600">Pengiriman Tepat Waktu</p>
-    </div>
+    <div><h3 class="text-4xl font-bold text-green">500+</h3><p class="mt-3 text-gray-600">Proyek Terselesaikan</p></div>
+    <div><h3 class="text-4xl font-bold text-green">10+</h3><p class="mt-3 text-gray-600">Tahun Pengalaman</p></div>
+    <div><h3 class="text-4xl font-bold text-green">100%</h3><p class="mt-3 text-gray-600">Material Original</p></div>
+    <div><h3 class="text-4xl font-bold text-green">Fast</h3><p class="mt-3 text-gray-600">Pengiriman Tepat Waktu</p></div>
   </div>
 </section>
 
-<!-- PRODUK (dari index, tapi fokus ke panel lantai) -->
+<!-- PRODUK SECTION -->
 <section id="produk" class="py-24 light-gray">
   <div class="max-w-7xl mx-auto px-8">
-    <h3 class="text-3xl font-bold text-green mb-16">
-      Produk Unggulan Kami
-    </h3>
-    <div class="grid md:grid-cols-1 gap-16 max-w-3xl mx-auto">
-      <div class="bg-white p-10 border grid md:grid-cols-2 gap-8 items-center">
-  <!-- Kolom Gambar -->
-  <div class="order-1">
-    <img src="panellantai15.jpeg" class="w-full h-auto object-cover" alt="Panel Lantai Citicon">
-  </div>
-  
-  <!-- Kolom Teks -->
-  <div class="order-2">
-    <h4 class="text-xl font-semibold text-green mb-4">
-      Panel Lantai Citicon
-    </h4>
-    <p class="text-gray-600 leading-relaxed">
-      Material pracetak ringan dengan struktur kuat dan presisi tinggi.
-      Mengurangi beban struktur, mempercepat waktu pengerjaan,
-      dan menekan biaya konstruksi secara signifikan.
-    </p>
-    <p class="text-gray-600 leading-relaxed mt-4">
-      Tersedia dalam berbagai ukuran: 1500mm hingga 3250mm dengan tebal 125mm.
-      Diperkuat wiremesh untuk kekuatan optimal.
-    </p>
-    <a href="#spesifikasi" class="btn-main inline-block mt-8">
-      Lihat Spesifikasi
-    </a>
-  </div>
-</div>
-    </div>
-  </div>
-</section>
-
-<!-- SPESIFIKASI (dari halaman kedua) -->
-<section id="spesifikasi" class="py-20 bg-white">
-  <div class="max-w-7xl mx-auto px-4">
-    <div class="mb-12">
-      <div class="industrial-border-top w-16 mb-4"></div>
-      <span class="text-sm uppercase tracking-wider text-gray-500">TECHNICAL DATA</span>
-      <h2 class="text-3xl md:text-4xl font-bold mt-2 text-gray-800">SPESIFIKASI <span class="text-green">PANEL LANTAI</span></h2>
-    </div>
-    <div class="overflow-x-auto">
-      <table class="industrial-table">
-        <thead>
-          <tr>
-            <th>TIPE</th>
-            <th>PANJANG (mm)</th>
-            <th>LEBAR (mm)</th>
-            <th>TEBAL (mm)</th>
-            <th>BERAT (kg)</th>
-            <th>/m³ (pcs)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>PL - 1500</td><td>1470</td><td>600</td><td>125</td><td>86.0</td><td>9.07</td></tr>
-          <tr><td>PL - 1750</td><td>1720</td><td>600</td><td>125</td><td>100.6</td><td>7.75</td></tr>
-          <tr><td>PL - 2000</td><td>1970</td><td>600</td><td>125</td><td>115.3</td><td>6.77</td></tr>
-          <tr><td>PL - 2250</td><td>2220</td><td>600</td><td>125</td><td>129.9</td><td>6.01</td></tr>
-          <tr><td>PL - 2500</td><td>2470</td><td>600</td><td>125</td><td>144.5</td><td>5.40</td></tr>
-          <tr><td>PL - 2750</td><td>2720</td><td>600</td><td>125</td><td>159.1</td><td>4.90</td></tr>
-          <tr><td>PL - 3000</td><td>2970</td><td>600</td><td>125</td><td>173.8</td><td>4.49</td></tr>
-          <tr><td>PL - 3250</td><td>3220</td><td>600</td><td>125</td><td>188.4</td><td>4.14</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="text-sm text-gray-400 mt-4">* Spesifikasi dapat berubah tanpa pemberitahuan. Konsultasikan dengan tim engineering kami.</p>
-  </div>
-</section>
-
-<!-- KEUNGGULAN PRODUK (dari halaman kedua) -->
-<section class="py-20" style="background-color: #F5F6F7;">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="mb-16">
-      <div class="industrial-border-top w-16 mb-4"></div>
-      <span class="text-sm uppercase tracking-wider text-gray-500">ENGINEERED FOR EXCELLENCE</span>
-      <h2 class="text-3xl md:text-4xl font-bold mt-2 text-gray-800">KEUNGGULAN <span class="text-green">TEKNIS</span></h2>
-    </div>
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <!-- Fitur 1 -->
-      <div class="feature-box">
-        <div class="w-12 h-12 bg-gray-200 flex items-center justify-center mb-4">
-          <i class="fas fa-bolt text-green text-xl"></i>
-        </div>
-        <h3 class="text-lg font-bold text-gray-800 mb-2">INSTALASI CEPAT</h3>
-        <p class="text-gray-600 text-sm">Tanpa bekisting, tanpa cor. Siap pasang langsung, menghemat waktu proyek hingga 60%.</p>
+    <h3 class="text-3xl font-bold text-green mb-16 text-center">Produk Unggulan Kami</h3>
+    <div class="grid md:grid-cols-2 gap-16">
+      <!-- Panel Lantai Card -->
+      <div class="bg-white p-10 border">
+        <img src="panellantai15.jpeg" class="mb-6 w-full h-64 object-cover" alt="Panel Lantai Citicon">
+        <h4 class="text-xl font-semibold text-green mb-4">Panel Lantai Citicon</h4>
+        <p class="text-gray-600 leading-relaxed">Material pracetak ringan untuk dak lantai. Kuat, presisi, dan menghemat waktu pengerjaan hingga 60%. Diperkuat wiremesh untuk kekuatan optimal.</p>
+        <a href="panel-lantai.html" class="btn-main inline-block mt-8">Detail Panel Lantai</a>
       </div>
-      <!-- Fitur 2 -->
-      <div class="feature-box">
-        <div class="w-12 h-12 bg-gray-200 flex items-center justify-center mb-4">
-          <i class="fas fa-weight-hanging text-green text-xl"></i>
-        </div>
-        <h3 class="text-lg font-bold text-gray-800 mb-2">RINGAN & KUAT</h3>
-        <p class="text-gray-600 text-sm">Mengurangi beban struktur hingga 30%. Diperkuat wiremesh untuk menahan beban tinggi.</p>
-      </div>
-      <!-- Fitur 3 -->
-      <div class="feature-box">
-        <div class="w-12 h-12 bg-gray-200 flex items-center justify-center mb-4">
-          <i class="fas fa-fire text-green text-xl"></i>
-        </div>
-        <h3 class="text-lg font-bold text-gray-800 mb-2">Tahan Api</h3>
-        <p class="text-gray-600 text-sm">Material beton kelas 1, tidak mudah terbakar. Ideal untuk bangunan dengan standar safety tinggi.</p>
-      </div>
-      <!-- Fitur 4 -->
-      <div class="feature-box">
-        <div class="w-12 h-12 bg-gray-200 flex items-center justify-center mb-4">
-          <i class="fas fa-ruler text-green text-xl"></i>
-        </div>
-        <h3 class="text-lg font-bold text-gray-800 mb-2">Presisi Tinggi</h3>
-        <p class="text-gray-600 text-sm">Toleransi ±1mm. Permukaan rata, siap finishing tanpa perataan tambahan.</p>
+      <!-- Bata Ringan Card -->
+      <div class="bg-white p-10 border">
+        <img src="bata1.jpg" class="mb-6 w-full h-64 object-cover" alt="Bata Ringan Hebel">
+        <h4 class="text-xl font-semibold text-green mb-4">Bata Ringan Hebel</h4>
+        <p class="text-gray-600 leading-relaxed">Solusi dinding modern dengan bobot ringan, presisi tinggi, tahan api, dan peredam suara. Hemat biaya konstruksi dan ramah lingkungan.</p>
+        <a href="bata-ringan.html" class="btn-main inline-block mt-8">Detail Bata Ringan</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PROSES (dari index) -->
-<section id="proses" class="py-24 bg-white">
-  <div class="max-w-7xl mx-auto px-8">
-    <h3 class="text-3xl font-bold text-green mb-16">
-      Proses Kerja Kami
-    </h3>
-    <div class="grid md:grid-cols-4 gap-10 text-center">
-      <div>
-        <h4 class="text-lg font-semibold mb-3">01. Konsultasi</h4>
-        <p class="text-gray-600">Diskusi kebutuhan proyek dan estimasi material.</p>
-      </div>
-      <div>
-        <h4 class="text-lg font-semibold mb-3">02. Survey</h4>
-        <p class="text-gray-600">Verifikasi lokasi dan kebutuhan teknis.</p>
-      </div>
-      <div>
-        <h4 class="text-lg font-semibold mb-3">03. Pengiriman</h4>
-        <p class="text-gray-600">Distribusi material tepat waktu.</p>
-      </div>
-      <div>
-        <h4 class="text-lg font-semibold mb-3">04. Support Teknis</h4>
-        <p class="text-gray-600">Pendampingan hingga proyek selesai.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- STORYTELLING (dari index dengan gaya industrial) -->
-<section id="about" class="py-24 primary-green text-white">
+<!-- TENTANG KAMI -->
+<section id="tentang" class="py-24 primary-green text-white">
   <div class="max-w-5xl mx-auto px-8">
     <div class="grid md:grid-cols-2 gap-12 items-center">
       <div>
         <div class="w-16 h-1 bg-yellow-400 mb-6"></div>
-        <h3 class="text-3xl font-bold text-white mb-6">
-          Membangun dengan Presisi dan Integritas
-        </h3>
-        <p class="text-gray-200 leading-relaxed mb-4">
-          Dalam industri konstruksi, ketepatan dan kecepatan adalah faktor utama.
-          Kami percaya bahwa material berkualitas bukan hanya tentang kekuatan,
-          tetapi juga tentang konsistensi dan komitmen terhadap standar.
-        </p>
-        <p class="text-gray-200 leading-relaxed">
-          Citicon Panel Lantai hadir sebagai mitra strategis yang membantu
-          kontraktor dan pemilik proyek mencapai target pembangunan
-          dengan lebih efisien, terukur, dan profesional.
-        </p>
+        <h3 class="text-3xl font-bold text-white mb-6">Membangun dengan Presisi dan Integritas</h3>
+        <p class="text-gray-200 leading-relaxed mb-4">Dalam industri konstruksi, ketepatan dan kecepatan adalah faktor utama. Kami percaya bahwa material berkualitas bukan hanya tentang kekuatan, tetapi juga tentang konsistensi dan komitmen terhadap standar.</p>
+        <p class="text-gray-200 leading-relaxed">Citicon Panel Lantai hadir sebagai mitra strategis yang membantu kontraktor dan pemilik proyek mencapai target pembangunan dengan lebih efisien, terukur, dan profesional.</p>
       </div>
-      <div class="h-full">
-        <img src="panellantai12.jpeg" class="w-full h-full object-cover" style="border: 1px solid #FFFFFF; min-height: 350px;" alt="Panel Lantai Citicon">
-      </div>
+      <div><img src="panellantai12.jpeg" class="w-full object-cover border border-white" style="min-height: 350px;" alt="Proyek"></div>
     </div>
   </div>
 </section>
 
-<!-- GALERI PROYEK (dari halaman kedua) -->
-<section class="py-20 bg-white">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="mb-12">
-      <div class="industrial-border-top w-16 mb-4"></div>
-      <span class="text-sm uppercase tracking-wider text-gray-500">PROJECT GALLERY</span>
-      <h2 class="text-3xl md:text-4xl font-bold mt-2 text-gray-800">DOKUMENTASI <span class="text-green">PROYEK</span></h2>
-    </div>
-    
-    <!-- Gallery grid - tanpa keterangan, hanya gambar/video -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-      <!-- panellantai1.jpeg -->
-      <div class="gallery-item">
-        <img src="panellantai1.jpeg" class="industrial-img" style="height: 250px;" alt="">
-      </div>
-      
-      <!-- video_panellantai2.mp4 (disisipkan di antara 1 dan 2) -->
-      <div class="gallery-item">
-        <video class="industrial-img" style="height: 250px; object-fit: cover;" autoplay muted loop playsinline>
-          <source src="video_panellantai2.mp4" type="video/mp4">
-        </video>
-      </div>
-      
-      <!-- panellantai2.jpeg -->
-      <div class="gallery-item">
-        <img src="panellantai2.jpeg" class="industrial-img" style="height: 250px;" alt="">
-      </div>
-      
-      <!-- panellantai3.jpeg -->
-      <div class="gallery-item">
-        <img src="panellantai3.jpeg" class="industrial-img" style="height: 250px;" alt="">
-      </div>
-      
-      <!-- panellantai4.jpeg -->
-      <div class="gallery-item">
-        <img src="panellantai4.jpeg" class="industrial-img" style="height: 250px;" alt="">
-      </div>
-      
-      <!-- panellantai5.jpeg -->
-      <div class="gallery-item">
-        <img src="panellantai5.jpeg" class="industrial-img" style="height: 250px;" alt="">
-      </div>
-      
-      <!-- panellantai6.jpeg -->
-      <div class="gallery-item">
-        <img src="panellantai23.jpeg" class="industrial-img" style="height: 250px;" alt="">
-      </div>
-      
-      <!-- panellantai7.jpeg -->
-      <div class="gallery-item">
-        <img src="panellantai7.jpeg" class="industrial-img" style="height: 250px;" alt="">
-      </div>
-      
-      <!-- panellantai9.jpeg dilewati -->
-      
-      <!-- panellantai10.jpeg -->
-      <div class="gallery-item">
-        <img src="panellantai10.jpeg" class="industrial-img" style="height: 250px;" alt="">
-      </div>
-      
-      <!-- panellantai11.jpeg -->
-      <div class="gallery-item">
-        <img src="panellantai27.jpeg" class="industrial-img" style="height: 250px;" alt="">
-      </div>
-      
-      <!-- panellantai12.jpeg -->
-      <div class="gallery-item">
-        <img src="panellantai28.jpeg" class="industrial-img" style="height: 250px;" alt="">
-      </div>
-      
-      <!-- panellantai13.jpeg -->
-      <div class="gallery-item">
-        <img src="panellantai13.jpeg" class="industrial-img" style="height: 250px;" alt="">
-      </div>
-      
-      <!-- panellantai14.jpeg -->
-      <div class="gallery-item">
-        <img src="panellantai14.jpeg" class="industrial-img" style="height: 250px;" alt="">
-      </div>
-      
-      <!-- panellantai15.jpeg -->
-      <div class="gallery-item">
-        <img src="panellantai15.jpeg" class="industrial-img" style="height: 250px;" alt="">
-      </div>
-      
-      <!-- panellantai16.jpeg dilewati -->
-      <!-- panellantai17.jpeg dilewati -->
-      <!-- panellantai18.jpeg dilewati -->
-      
-      <!-- panellantai19.jpeg -->
-      <div class="gallery-item">
-        <img src="panellantai19.jpeg" class="industrial-img" style="height: 250px;" alt="">
-      </div>
-      
-      <!-- panellantai20.jpeg -->
-      <div class="gallery-item">
-        <img src="panellantai24.jpeg" class="industrial-img" style="height: 250px;" alt="">
-      </div>
-      
-      <!-- panellantai21.jpeg -->
-      <div class="gallery-item">
-        <img src="panellantai25.jpeg" class="industrial-img" style="height: 250px;" alt="">
-      </div>
-      
-      <!-- panellantai22.jpeg -->
-      <div class="gallery-item">
-        <img src="panellantai26.jpeg" class="industrial-img" style="height: 250px;" alt="">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA SECTION (dari index dengan warna) -->
+<!-- CTA SECTION -->
 <section id="kontak" class="py-24 accent-yellow text-center">
   <div class="max-w-4xl mx-auto px-6">
-    <h3 class="text-3xl md:text-4xl font-bold text-green mb-6">
-      Siap Memulai Proyek Anda?
-    </h3>
-    <p class="text-lg text-green mb-10">
-      Konsultasikan kebutuhan panel lantai Anda hari ini.
-    </p>
+    <h3 class="text-3xl md:text-4xl font-bold text-green mb-6">Siap Memulai Proyek Anda?</h3>
+    <p class="text-lg text-green mb-10">Konsultasikan kebutuhan material konstruksi Anda hari ini.</p>
     <div class="flex flex-col sm:flex-row justify-center gap-4">
-      <a href="whatsapp.php" class="btn-main">
-        Hubungi Sekarang
-      </a>
-      <a href="#spesifikasi" class="btn-outline">
-        Lihat Spesifikasi
-      </a>
+      <a href="https://wa.me/628972225290?text=Halo%2C%20saya%20ingin%20konsultasi%20mengenai%20pembelian%20panel%20lantai%20dan%20bata%20ringan" target="_blank" class="btn-main">Hubungi Sekarang</a>
+      <a href="#produk" class="btn-outline">Lihat Produk</a>
     </div>
   </div>
 </section>
 
-<!-- FOOTER (dari index dengan alamat lengkap) -->
+<!-- FOOTER -->
 <footer class="bg-gray-900 text-gray-400 py-10 text-center text-sm">
   <div class="max-w-7xl mx-auto px-8">
     <p class="font-semibold text-white mb-2">Mandiri Jaya</p>
-    <p class="mt-2 max-w-3xl mx-auto">
-      Jl. Sampaan - Berbah, Kadisono, Tegaltirto, Kec. Berbah, Kabupaten Sleman, Daerah Istimewa Yogyakarta, Indonesia
-    </p>
-    <p class="mt-2">Telp: +628972225290</p>
+    <p class="mt-2 max-w-3xl mx-auto">Jl. Sampaan - Berbah, Kadisono, Tegaltirto, Kec. Berbah, Kabupaten Sleman, Daerah Istimewa Yogyakarta, Indonesia</p>
+    <p class="mt-2">Telp: +628972225290 | Email: kontak@mandirijaya.com</p>
     <p class="mt-6">© 2026 Citicon Panel Lantai. All rights reserved.</p>
   </div>
 </footer>
 
-<!-- Floating WhatsApp Button (dari index) -->
-<a href="https://wa.me/628972225290" target="_blank" class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 shadow-lg transition-all duration-300">
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/628972225290?text=Halo%2C%20saya%20ingin%20konsultasi%20mengenai%20pembelian%20panel%20lantai%20dan%20bata%20ringan" target="_blank" class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 shadow-lg transition-all duration-300">
   <i class="fab fa-whatsapp text-2xl"></i>
 </a>
 
-<!-- Smooth scrolling script -->
+<!-- FLOATING MENU -->
+<div class="fixed bottom-6 left-6 z-50">
+  <div class="relative">
+    <button id="menuButton" class="floating-menu-btn bg-white border-2 border-green p-4 shadow-lg hover:bg-green hover:text-white transition-all">
+      <i class="fas fa-bars text-green text-2xl hover:text-white"></i>
+    </button>
+    <div id="menuDropdown" class="menu-dropdown absolute bottom-16 left-0 w-48 flex flex-col opacity-0 pointer-events-none bg-white border border-gray-200 shadow-lg">
+      <a href="index.html" class="block bg-green text-white px-4 py-3 text-sm font-medium border-b border-gray-200"><i class="fas fa-home mr-2"></i> Beranda</a>
+      <a href="bata-ringan.html" class="block text-gray-700 hover:bg-green hover:text-white px-4 py-3 text-sm font-medium border-b border-gray-200"><i class="fas fa-cube mr-2"></i> Bata Ringan</a>
+      <a href="panel-lantai.html" class="block text-gray-700 hover:bg-green hover:text-white px-4 py-3 text-sm font-medium"><i class="fas fa-building mr-2"></i> Panel Lantai</a>
+    </div>
+  </div>
+</div>
+
 <script>
-  // Smooth scrolling for anchor links
+  // Floating menu
+  const menuButton = document.getElementById("menuButton");
+  const menuDropdown = document.getElementById("menuDropdown");
+  if(menuButton && menuDropdown) {
+    let hideTimeout;
+    function showDropdown() { menuDropdown.classList.add("opacity-100", "pointer-events-auto"); menuDropdown.classList.remove("opacity-0", "pointer-events-none"); clearTimeout(hideTimeout); }
+    function hideDropdown() { hideTimeout = setTimeout(() => { menuDropdown.classList.remove("opacity-100", "pointer-events-auto"); menuDropdown.classList.add("opacity-0", "pointer-events-none"); }, 2000); }
+    menuButton.addEventListener("mouseenter", showDropdown);
+    menuButton.addEventListener("mouseleave", hideDropdown);
+    menuDropdown.addEventListener("mouseenter", () => clearTimeout(hideTimeout));
+    menuDropdown.addEventListener("mouseleave", hideDropdown);
+  }
+  
+  // Smooth scrolling
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({
-          behavior: 'smooth'
-        });
-      }
-    });
+    anchor.addEventListener('click', function(e) { e.preventDefault(); const target = document.querySelector(this.getAttribute('href')); if(target) target.scrollIntoView({ behavior: 'smooth' }); });
   });
 </script>
+
+<!-- Google tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17410444702"></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-17410444702'); </script>
 
 </body>
 </html>
